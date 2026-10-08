@@ -30,10 +30,10 @@
     .brand-logo{width:290px;height:86px;object-fit:contain;object-position:center}
     .nav-links{display:flex;align-items:center;justify-content:flex-end;gap:21px;color:var(--white);font-size:.88rem;font-weight:600}
     .nav-links a{transition:color .2s}
-    .nav-links a:hover,.nav-links a:focus-visible{color:var(--orange)}
+.nav-links a:not(.nav-cta):hover,.nav-links a:not(.nav-cta):focus-visible{color:var(--orange)}
     .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;background:linear-gradient(135deg,#7a4d00 0%,#d29512 24%,#f7d56d 48%,#d69d1d 72%,#805100 100%);color:#050505;font-weight:800;border:1px solid #f5cf67;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 18px rgba(0,0,0,.24);text-shadow:0 1px 0 rgba(255,255,255,.28);transition:transform .2s,filter .2s,box-shadow .2s}
     .nav-cta:hover,.nav-cta:focus-visible,.button:hover,.button:focus-visible{color:#050505;filter:brightness(1.13) saturate(1.08);transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.62),0 9px 24px rgba(224,170,43,.3)}
-    .nav-links .nav-cta:hover,.nav-links .nav-cta:focus-visible{color:#050505}
+.nav-links a.nav-cta,.nav-links a.nav-cta:hover,.nav-links a.nav-cta:focus-visible{color:#050505!important;-webkit-text-fill-color:#050505;text-shadow:none}
     .nav-cta:active,.button:active{transform:translateY(0);filter:brightness(.98)}
     .menu-button{display:none;width:46px;height:46px;color:var(--white);background:transparent;border:1px solid rgba(255,255,255,.35);font-size:1.4rem}
     .hero{position:relative;min-height:780px;padding:205px 0 100px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(20,33,61,.78) 52%,rgba(20,33,61,.28) 100%),url('https://www.mapadaobra.com.br/wp-content/uploads/2024/07/A-alvenaria-e-o-sistema-construtivo-mais-utilizado-no-Brasil-scaled.jpg') center/cover no-repeat}
