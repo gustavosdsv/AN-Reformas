@@ -12,7 +12,7 @@
   <style>
     :root{--black:#050505;--navy:#171717;--orange:#e0aa2b;--light:#e2e2e2;--white:#f9f9f9;--silver:#a9a9a9;--gold-light:#f5ca55;--max:1160px}
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:150px}
+    html{scroll-behavior:smooth;scroll-padding-top:116px}
     body{margin:0;color:var(--navy);background:var(--white);font:400 1rem/1.65 Inter,Arial,sans-serif}
     img{display:block;width:100%;height:100%;object-fit:cover}
     a{color:inherit;text-decoration:none}
@@ -25,16 +25,16 @@
     p{margin:0}
     section{padding:96px 0}
     .site-header{position:fixed;z-index:30;inset:0 0 auto;background:rgba(0,0,0,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)}
-    .nav{min-height:142px;padding:9px 0 11px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+    .nav{min-height:110px;padding:8px 0;display:flex;align-items:center;justify-content:space-between;gap:20px}
     .brand{display:flex;align-items:center;color:var(--white)}
     .brand-logo{width:290px;height:86px;object-fit:contain;object-position:center}
-    .nav-links{display:flex;align-items:center;justify-content:center;gap:30px;color:var(--white);font-size:.9rem;font-weight:600}
+    .nav-links{display:flex;align-items:center;justify-content:flex-end;gap:21px;color:var(--white);font-size:.88rem;font-weight:600}
     .nav-links a{transition:color .2s}
     .nav-links a:hover,.nav-links a:focus-visible{color:var(--orange)}
     .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;background:var(--orange);color:var(--black);font-weight:800;border:0;transition:transform .2s,background .2s}
     .nav-cta:hover,.button:hover{background:var(--gold-light);transform:translateY(-2px)}
     .menu-button{display:none;width:46px;height:46px;color:var(--white);background:transparent;border:1px solid rgba(255,255,255,.35);font-size:1.4rem}
-    .hero{position:relative;min-height:820px;padding:240px 0 100px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(20,33,61,.78) 52%,rgba(20,33,61,.28) 100%),url('https://www.mapadaobra.com.br/wp-content/uploads/2024/07/A-alvenaria-e-o-sistema-construtivo-mais-utilizado-no-Brasil-scaled.jpg') center/cover no-repeat}
+    .hero{position:relative;min-height:780px;padding:205px 0 100px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(20,33,61,.78) 52%,rgba(20,33,61,.28) 100%),url('https://www.mapadaobra.com.br/wp-content/uploads/2024/07/A-alvenaria-e-o-sistema-construtivo-mais-utilizado-no-Brasil-scaled.jpg') center/cover no-repeat}
     .hero::after{content:"";position:absolute;inset:auto 0 0;height:12px;background:linear-gradient(90deg,var(--orange) 0 34%,var(--navy) 34%)}
     .hero-content{position:relative;z-index:1}
     .hero-copy{max-width:660px;margin:24px 0 34px;color:var(--light);font-size:1.15rem}
