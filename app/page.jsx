@@ -5,28 +5,30 @@ const whatsapp =
 
 const services = [
   [
-    "Alvenaria",
-    "Paredes, muros, divisões e outros serviços em tijolos ou blocos.",
-  ],
-  [
     "Reformas",
     "Melhorias e ajustes em casas, apartamentos e espaços comerciais.",
   ],
   [
-    "Acabamento",
-    "Reboco, contrapiso e serviços finais para deixar a obra pronta.",
+    "Pintura",
+    "Pintura interna e externa para renovar e proteger cada ambiente.",
   ],
   [
-    "Estrutura",
-    "Execução de estruturas para dar segurança e firmeza à construção.",
+    "Elétrica",
+    "Instalações, ajustes e manutenção da parte elétrica do imóvel.",
   ],
+  [
+    "Hidráulica",
+    "Instalações e reparos em tubulações, torneiras e pontos de água.",
+  ],
+  ["Solda", "Serviços de solda para estruturas, portões e peças metálicas."],
   [
     "Calhas",
-    "Instalação e manutenção de calhas para conduzir a água da chuva.",
+    "Instalação e manutenção para conduzir corretamente a água da chuva.",
   ],
+  ["Rufos", "Instalação para proteger paredes, telhados e encontros da obra."],
   [
-    "Rufos",
-    "Instalação de rufos para proteger paredes, telhados e encontros da obra.",
+    "Construção em geral",
+    "Mão de obra para diferentes etapas de construções residenciais e comerciais.",
   ],
 ];
 
@@ -89,8 +91,8 @@ export default function Home() {
               <h2>Gente que entende de obra.</h2>
               <p>
                 A AN Reformas e Construções atende obras residenciais e
-                comerciais. Trabalhamos com atenção, organização e respeito ao
-                seu projeto.
+                comerciais. Trabalhamos com atenção, organização e respeito à
+                sua obra.
               </p>
               <div className="about-points">
                 {[
