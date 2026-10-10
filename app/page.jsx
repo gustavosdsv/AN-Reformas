@@ -171,13 +171,13 @@ export default function Home() {
       <footer>
         <div className="container footer-row">
           <span>© {new Date().getFullYear()} AN Reformas e Construções</span>
-          <span className="footer-signature">
-            <span>Construção, reforma e acabamento</span>
-            <img
-              className="footer-flag"
-              src="/assets/bandeira-brasil.svg"
-              alt="Bandeira do Brasil"
-            />
+          <img
+            className="footer-flag"
+            src="/assets/bandeira-brasil.svg"
+            alt="Bandeira do Brasil"
+          />
+          <span className="footer-tagline">
+            Construção, reforma e acabamento
           </span>
         </div>
       </footer>
