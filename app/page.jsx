@@ -6,42 +6,42 @@ const services = [
   [
     "Reformas",
     "Melhorias e ajustes em casas, apartamentos e espaços comerciais.",
-    "Gostaria de solicitar um orçamento para uma reforma no meu imóvel. Posso enviar fotos dos ambientes e explicar as melhorias que pretendo realizar para vocês avaliarem o serviço e a necessidade de uma visita?",
+    "Gostaria de solicitar um orçamento para uma reforma no meu imóvel. Podemos conversar sobre o que preciso e a disponibilidade de vocês?",
   ],
   [
     "Pintura",
     "Pintura interna e externa para renovar e proteger cada ambiente.",
-    "Gostaria de solicitar um orçamento para pintura. Posso enviar fotos e informações sobre os ambientes, as superfícies e o acabamento desejado? Gostaria de saber também sobre a preparação das paredes e o prazo de execução.",
+    "Gostaria de solicitar um orçamento para pintura no meu imóvel. Podemos conversar sobre o serviço e os prazos de atendimento?",
   ],
   [
     "Elétrica",
     "Instalações, ajustes e manutenção da parte elétrica do imóvel.",
-    "Gostaria de solicitar um orçamento para serviços de elétrica no meu imóvel. Posso detalhar as instalações, os ajustes ou os reparos necessários para vocês orientarem a avaliação e a possibilidade de uma visita técnica?",
+    "Gostaria de solicitar um orçamento para serviços de elétrica no meu imóvel. Podemos conversar sobre o que precisa ser feito e a disponibilidade de atendimento?",
   ],
   [
     "Hidráulica",
     "Instalações e reparos em tubulações, torneiras e pontos de água.",
-    "Gostaria de solicitar um orçamento para serviços de hidráulica. Posso explicar o que preciso e enviar fotos das tubulações, dos pontos de água ou dos locais que necessitam de reparo para vocês avaliarem o atendimento?",
+    "Gostaria de solicitar um orçamento para serviços de hidráulica no meu imóvel. Podemos conversar sobre o que preciso e como funciona o atendimento?",
   ],
   [
     "Solda",
     "Serviços de solda para estruturas, portões e peças metálicas.",
-    "Gostaria de solicitar um orçamento para um serviço de solda. Posso enviar fotos, medidas e detalhes da estrutura, do portão ou da peça metálica para vocês avaliarem o trabalho e o prazo de execução?",
+    "Gostaria de solicitar um orçamento para um serviço de solda. Podemos conversar sobre o trabalho e o prazo para realização?",
   ],
   [
     "Calhas",
     "Instalação e manutenção para conduzir corretamente a água da chuva.",
-    "Gostaria de solicitar um orçamento para instalação ou manutenção de calhas. Posso enviar fotos do telhado e informar as medidas disponíveis e o que precisa ser feito? Gostaria de combinar uma avaliação para definir a solução adequada.",
+    "Gostaria de solicitar um orçamento para instalação ou manutenção de calhas. Podemos conversar sobre o serviço e a disponibilidade de vocês?",
   ],
   [
     "Rufos",
     "Instalação para proteger paredes, telhados e encontros da obra.",
-    "Gostaria de solicitar um orçamento para instalação ou reparo de rufos. Posso enviar fotos dos encontros entre o telhado e as paredes e explicar se há infiltrações? Gostaria de saber como podemos agendar uma avaliação do local.",
+    "Gostaria de solicitar um orçamento para instalação ou reparo de rufos. Podemos conversar sobre o que preciso e como funciona o atendimento?",
   ],
   [
     "Construção em geral",
     "Mão de obra para diferentes etapas de construções residenciais e comerciais.",
-    "Gostaria de solicitar um orçamento para construção. Posso compartilhar o projeto, a localização do imóvel e as etapas para as quais preciso de mão de obra? Gostaria de conversar sobre o escopo do trabalho e a disponibilidade da equipe.",
+    "Gostaria de solicitar um orçamento para uma obra. Podemos conversar sobre as etapas da construção e a disponibilidade da equipe?",
   ],
 ];
 
@@ -55,6 +55,16 @@ const serviceImages = {
   Rufos: "/assets/services/rufos.png",
   "Construção em geral": "/assets/services/construcao-geral.png",
 };
+
+const photos = [
+  "/assets/gallery/construcao-1.jpg",
+  "/assets/gallery/construcao-2.jpg",
+  "/assets/gallery/reformas-1.jpg",
+  "/assets/gallery/reformas-2.jpg",
+  "/assets/gallery/rufos-1.jpg",
+  "/assets/gallery/rufos-2.jpg",
+  "/assets/gallery/eletrica-hidraulica-1.jpg",
+];
 
 export default function Home() {
   return (
@@ -149,7 +159,7 @@ export default function Home() {
                     <a
                       className="button button--gold service-quote"
                       href={whatsappLink(
-                        `Olá, equipe da AN Reformas e Construções! Vim pelo site de vocês. ${message} Obrigado!`,
+                        `Olá! Vim pelo site de vocês. ${message}`,
                       )}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -159,6 +169,22 @@ export default function Home() {
                     </a>
                   </div>
                 </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="fotos">
+          <div className="container">
+            <div className="gallery-head">
+              <p className="eyebrow">Fotos</p>
+              <h2>Nosso trabalho</h2>
+            </div>
+            <div className="gallery">
+              {photos.map((src) => (
+                <figure key={src}>
+                  <img src={src} alt="" loading="lazy" />
+                </figure>
               ))}
             </div>
           </div>

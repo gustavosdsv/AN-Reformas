@@ -43,6 +43,9 @@ export default function Header() {
           <a href="#servicos" onClick={close}>
             Serviços
           </a>
+          <a href="#fotos" onClick={close}>
+            Fotos
+          </a>
           <a
             className="button button--gold"
             href={whatsapp}
