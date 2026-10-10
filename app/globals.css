@@ -374,8 +374,22 @@ footer {
   align-items: center;
   gap: 20px;
 }
-.footer-tagline {
+.footer-credit {
   justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  transition: color 0.2s;
+}
+.footer-credit:hover,
+.footer-credit:focus-visible {
+  color: var(--white);
+}
+.otarek-logo {
+  width: 112px;
+  height: auto;
+  object-fit: contain;
 }
 .footer-flag {
   width: 28px;
@@ -493,7 +507,7 @@ footer {
     justify-items: center;
     text-align: center;
   }
-  .footer-tagline {
+  .footer-credit {
     justify-self: center;
   }
 }

@@ -176,9 +176,20 @@ export default function Home() {
             src="/assets/bandeira-brasil.svg"
             alt="Bandeira do Brasil"
           />
-          <span className="footer-tagline">
-            Construção, reforma e acabamento
-          </span>
+          <a
+            className="footer-credit"
+            href="https://www.instagram.com/we.otarek"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram da Otarek"
+          >
+            <span>Desenvolvido por</span>
+            <img
+              className="otarek-logo"
+              src="/assets/otarek-branco.png"
+              alt="Otarek"
+            />
+          </a>
         </div>
       </footer>
     </>
