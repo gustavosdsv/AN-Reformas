@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 
-const whatsapp =
-  "https://wa.me/5547988028970?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento.";
+import { whatsapp } from "../lib/whatsapp";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -43,9 +42,6 @@ export default function Header() {
           </a>
           <a href="#servicos" onClick={close}>
             Serviços
-          </a>
-          <a href="#fotos" onClick={close}>
-            Fotos
           </a>
           <a
             className="button button--gold"

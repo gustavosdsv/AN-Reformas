@@ -1,46 +1,60 @@
 import Header from "../components/header";
 
-const whatsapp =
-  "https://wa.me/5547988028970?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento.";
+import { whatsapp, whatsappLink } from "../lib/whatsapp";
 
 const services = [
   [
     "Reformas",
     "Melhorias e ajustes em casas, apartamentos e espaços comerciais.",
+    "Gostaria de solicitar um orçamento para uma reforma no meu imóvel. Posso enviar fotos dos ambientes e explicar as melhorias que pretendo realizar para vocês avaliarem o serviço e a necessidade de uma visita?",
   ],
   [
     "Pintura",
     "Pintura interna e externa para renovar e proteger cada ambiente.",
+    "Gostaria de solicitar um orçamento para pintura. Posso enviar fotos e informações sobre os ambientes, as superfícies e o acabamento desejado? Gostaria de saber também sobre a preparação das paredes e o prazo de execução.",
   ],
   [
     "Elétrica",
     "Instalações, ajustes e manutenção da parte elétrica do imóvel.",
+    "Gostaria de solicitar um orçamento para serviços de elétrica no meu imóvel. Posso detalhar as instalações, os ajustes ou os reparos necessários para vocês orientarem a avaliação e a possibilidade de uma visita técnica?",
   ],
   [
     "Hidráulica",
     "Instalações e reparos em tubulações, torneiras e pontos de água.",
+    "Gostaria de solicitar um orçamento para serviços de hidráulica. Posso explicar o que preciso e enviar fotos das tubulações, dos pontos de água ou dos locais que necessitam de reparo para vocês avaliarem o atendimento?",
   ],
-  ["Solda", "Serviços de solda para estruturas, portões e peças metálicas."],
+  [
+    "Solda",
+    "Serviços de solda para estruturas, portões e peças metálicas.",
+    "Gostaria de solicitar um orçamento para um serviço de solda. Posso enviar fotos, medidas e detalhes da estrutura, do portão ou da peça metálica para vocês avaliarem o trabalho e o prazo de execução?",
+  ],
   [
     "Calhas",
     "Instalação e manutenção para conduzir corretamente a água da chuva.",
+    "Gostaria de solicitar um orçamento para instalação ou manutenção de calhas. Posso enviar fotos do telhado e informar as medidas disponíveis e o que precisa ser feito? Gostaria de combinar uma avaliação para definir a solução adequada.",
   ],
-  ["Rufos", "Instalação para proteger paredes, telhados e encontros da obra."],
+  [
+    "Rufos",
+    "Instalação para proteger paredes, telhados e encontros da obra.",
+    "Gostaria de solicitar um orçamento para instalação ou reparo de rufos. Posso enviar fotos dos encontros entre o telhado e as paredes e explicar se há infiltrações? Gostaria de saber como podemos agendar uma avaliação do local.",
+  ],
   [
     "Construção em geral",
     "Mão de obra para diferentes etapas de construções residenciais e comerciais.",
+    "Gostaria de solicitar um orçamento para construção. Posso compartilhar o projeto, a localização do imóvel e as etapas para as quais preciso de mão de obra? Gostaria de conversar sobre o escopo do trabalho e a disponibilidade da equipe.",
   ],
 ];
 
-const photos = [
-  "/assets/gallery/construcao-1.jpg",
-  "/assets/gallery/construcao-2.jpg",
-  "/assets/gallery/reformas-1.jpg",
-  "/assets/gallery/reformas-2.jpg",
-  "/assets/gallery/rufos-1.jpg",
-  "/assets/gallery/rufos-2.jpg",
-  "/assets/gallery/eletrica-hidraulica-1.jpg",
-];
+const serviceImages = {
+  Reformas: "/assets/services/reformas.png",
+  Pintura: "/assets/services/pintura.png",
+  Elétrica: "/assets/services/eletrica.png",
+  Hidráulica: "/assets/services/hidraulica.png",
+  Solda: "/assets/services/solda.png",
+  Calhas: "/assets/services/calhas.png",
+  Rufos: "/assets/services/rufos.png",
+  "Construção em geral": "/assets/services/construcao-geral.png",
+};
 
 export default function Home() {
   return (
@@ -116,32 +130,35 @@ export default function Home() {
               </p>
             </div>
             <div className="service-grid">
-              {services.map(([title, description], index) => (
+              {services.map(([title, description, message], index) => (
                 <article className="service-card" key={title}>
-                  <span className="service-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h3>{title}</h3>
-                    <p>{description}</p>
+                  <img
+                    className="service-image"
+                    src={serviceImages[title]}
+                    alt=""
+                    loading="lazy"
+                  />
+                  <div className="service-card-content">
+                    <span className="service-number">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h3>{title}</h3>
+                      <p>{description}</p>
+                    </div>
+                    <a
+                      className="button button--gold service-quote"
+                      href={whatsappLink(
+                        `Olá, equipe da AN Reformas e Construções! Vim pelo site de vocês. ${message} Obrigado!`,
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Solicitar orçamento: ${title}`}
+                    >
+                      Solicitar orçamento
+                    </a>
                   </div>
                 </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="fotos">
-          <div className="container">
-            <div className="gallery-head">
-              <p className="eyebrow">Fotos</p>
-              <h2>Nosso trabalho</h2>
-            </div>
-            <div className="gallery">
-              {photos.map((src) => (
-                <figure key={src}>
-                  <img src={src} alt="" loading="lazy" />
-                </figure>
               ))}
             </div>
           </div>
