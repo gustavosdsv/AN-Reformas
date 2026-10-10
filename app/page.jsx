@@ -33,26 +33,13 @@ const services = [
 ];
 
 const photos = [
-  [
-    "https://www.mapadaobra.com.br/wp-content/uploads/2024/07/A-alvenaria-e-o-sistema-construtivo-mais-utilizado-no-Brasil-scaled.jpg",
-    "Profissionais executando serviço de alvenaria",
-    "Alvenaria",
-  ],
-  [
-    "https://www.jbjblocostelhastijolos.com.br/assets/img/blog/qualidade-dos-materiais-e-produtividade-da-obra.png",
-    "Construção de parede de blocos",
-    "Construção",
-  ],
-  [
-    "https://www.iw8.com.br/imagens/noticias/original/construcao-civil-na-bahia-23032013185630.jpg",
-    "Equipe trabalhando em uma obra",
-    "Equipe em ação",
-  ],
-  [
-    "https://cdn.agenciacidades.com.br/upload/dn_arquivo/2025/03/00059566-curitiba-2009-cesar-brustolin-smcs-1.jpg",
-    "Trabalho de construção civil em andamento",
-    "Obra em andamento",
-  ],
+  "/assets/gallery/construcao-1.jpg",
+  "/assets/gallery/construcao-2.jpg",
+  "/assets/gallery/reformas-1.jpg",
+  "/assets/gallery/reformas-2.jpg",
+  "/assets/gallery/rufos-1.jpg",
+  "/assets/gallery/rufos-2.jpg",
+  "/assets/gallery/eletrica-hidraulica-1.jpg",
 ];
 
 export default function Home() {
@@ -151,10 +138,9 @@ export default function Home() {
               <h2>Nosso trabalho</h2>
             </div>
             <div className="gallery">
-              {photos.map(([src, alt, caption]) => (
-                <figure key={caption}>
-                  <img src={src} alt={alt} loading="lazy" />
-                  <figcaption>{caption}</figcaption>
+              {photos.map((src) => (
+                <figure key={src}>
+                  <img src={src} alt="" loading="lazy" />
                 </figure>
               ))}
             </div>
@@ -185,7 +171,14 @@ export default function Home() {
       <footer>
         <div className="container footer-row">
           <span>© {new Date().getFullYear()} AN Reformas e Construções</span>
-          <span>Construção, reforma e acabamento</span>
+          <span className="footer-signature">
+            <span>Construção, reforma e acabamento</span>
+            <img
+              className="footer-flag"
+              src="/assets/bandeira-brasil.svg"
+              alt="Bandeira do Brasil"
+            />
+          </span>
         </div>
       </footer>
     </>
