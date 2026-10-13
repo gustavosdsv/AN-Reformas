@@ -214,6 +214,37 @@ export default function Home() {
       <footer>
         <div className="container footer-row">
           <span>© {new Date().getFullYear()} AN Reformas e Construções</span>
+          <div className="footer-socials">
+            <span>Siga a AN Reformas:</span>
+            <a
+              href="https://www.instagram.com/anreformasbrasil/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Siga a AN Reformas no Instagram"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/anreformasbrasil/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Siga a AN Reformas no Facebook"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.167 10.125 24v-8.437H7.078V12.07h3.047V9.429c0-3.02 1.792-4.689 4.533-4.689 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.955.93-1.955 1.885v2.26h3.328l-.532 3.492h-2.796V24C19.612 23.167 24 18.1 24 12.073z" />
+              </svg>
+            </a>
+          </div>
           <img
             className="footer-flag"
             src="/assets/bandeira-brasil.svg"
