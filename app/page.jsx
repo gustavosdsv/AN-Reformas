@@ -73,11 +73,14 @@ export default function Home() {
       <main>
         <section className="hero" id="inicio">
           <div className="hero-content container">
-            <p className="eyebrow">Reformas e construção civil</p>
+            <p className="eyebrow">
+              Reformas e construção civil em Balneário Camboriú
+            </p>
             <h1>Trabalho bem feito do começo ao fim.</h1>
             <p className="hero-copy">
-              Equipe para construção, reforma e acabamento. Serviço organizado,
-              compromisso com prazo e cuidado em cada etapa.
+              Equipe para construção, reforma e acabamento em Balneário
+              Camboriú. Serviço organizado, compromisso com prazo e cuidado em
+              cada etapa.
             </p>
             <div className="hero-actions">
               <a
