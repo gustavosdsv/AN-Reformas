@@ -115,7 +115,10 @@ export default function Home() {
               <img
                 src="https://www.jbjblocostelhastijolos.com.br/assets/img/blog/qualidade-dos-materiais-e-produtividade-da-obra.png"
                 alt="Equipe trabalhando na construção de uma parede de blocos"
+                width="1200"
+                height="800"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -139,7 +142,10 @@ export default function Home() {
                     className="service-image"
                     src={serviceImages[title]}
                     alt={`Serviço de ${title.toLowerCase()} em Balneário Camboriú`}
+                    width="800"
+                    height="600"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="service-card-content">
                     <span className="service-number">
@@ -176,7 +182,14 @@ export default function Home() {
             <div className="gallery">
               {photos.map(([src, alt]) => (
                 <figure key={src}>
-                  <img src={src} alt={alt} loading="lazy" />
+                  <img
+                    src={src}
+                    alt={alt}
+                    width="720"
+                    height="1280"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </figure>
               ))}
             </div>
@@ -274,6 +287,9 @@ export default function Home() {
             className="footer-flag"
             src="/assets/bandeira-brasil.svg"
             alt="Bandeira do Brasil"
+            width="28"
+            height="20"
+            loading="lazy"
           />
           <a
             className="footer-credit"
@@ -285,8 +301,11 @@ export default function Home() {
             <span>Desenvolvido por</span>
             <img
               className="otarek-logo"
-              src="/assets/otarek-branco.png"
+              src="/assets/otarek-branco.webp"
               alt="Otarek"
+              width="224"
+              height="36"
+              loading="lazy"
             />
           </a>
         </div>

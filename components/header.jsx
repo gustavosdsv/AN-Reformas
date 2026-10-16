@@ -19,8 +19,11 @@ export default function Header() {
         >
           <img
             className="brand-logo"
-            src="/assets/logo-an-transparente.png"
+            src="/assets/logo-an-transparente.webp"
             alt="AN Reformas Manutenções"
+            width="320"
+            height="183"
+            fetchPriority="high"
           />
         </a>
         <button

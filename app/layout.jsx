@@ -1,6 +1,23 @@
+import { Barlow_Condensed, Inter } from "next/font/google";
+import { preconnect, preload } from "react-dom";
+
 import "./globals.css";
 
-import { phone, siteName, siteUrl, socials } from "../lib/site";
+import { heroImage, phone, siteName, siteUrl, socials } from "../lib/site";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const barlow = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["700", "800"],
+  variable: "--font-barlow",
+  display: "swap",
+});
 
 const title = "AN Reformas em Balneário Camboriú | Construção e Reformas";
 const description =
@@ -113,8 +130,13 @@ const businessJsonLd = {
 };
 
 export default function RootLayout({ children }) {
+  // A imagem do hero vem de outro domínio e é o maior elemento da primeira
+  // dobra: abre a conexão cedo e baixa com prioridade alta.
+  preconnect(new URL(heroImage).origin);
+  preload(heroImage, { as: "image", fetchPriority: "high" });
+
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${inter.variable} ${barlow.variable}`}>
       <body>
         <script
           type="application/ld+json"
