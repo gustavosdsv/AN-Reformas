@@ -23,7 +23,6 @@ export default function Header() {
             alt="AN Reformas Manutenções"
             width="320"
             height="183"
-            fetchPriority="high"
           />
         </a>
         <button

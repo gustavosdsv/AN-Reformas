@@ -1,9 +1,8 @@
 import { Barlow_Condensed, Inter } from "next/font/google";
-import { preconnect, preload } from "react-dom";
 
 import "./globals.css";
 
-import { heroImage, phone, siteName, siteUrl, socials } from "../lib/site";
+import { phone, siteName, siteUrl, socials } from "../lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -130,11 +129,6 @@ const businessJsonLd = {
 };
 
 export default function RootLayout({ children }) {
-  // A imagem do hero vem de outro domínio e é o maior elemento da primeira
-  // dobra: abre a conexão cedo e baixa com prioridade alta.
-  preconnect(new URL(heroImage).origin);
-  preload(heroImage, { as: "image", fetchPriority: "high" });
-
   return (
     <html lang="pt-BR" className={`${inter.variable} ${barlow.variable}`}>
       <body>

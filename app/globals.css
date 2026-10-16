@@ -196,26 +196,36 @@ h3 {
   padding: 205px 0 100px;
   display: flex;
   align-items: center;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.88) 0%,
-      rgba(20, 33, 61, 0.78) 52%,
-      rgba(20, 33, 61, 0.28) 100%
-    ),
-    url("https://www.mapadaobra.com.br/wp-content/uploads/2024/07/A-alvenaria-e-o-sistema-construtivo-mais-utilizado-no-Brasil-scaled.jpg")
-      center/cover no-repeat;
+  overflow: hidden;
+  background: var(--black);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.88) 0%,
+    rgba(20, 33, 61, 0.78) 52%,
+    rgba(20, 33, 61, 0.28) 100%
+  );
 }
 .hero::after {
   content: "";
   position: absolute;
+  z-index: 1;
   inset: auto 0 0;
   height: 12px;
   background: linear-gradient(90deg, var(--gold) 0 34%, var(--graphite) 34%);
 }
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .hero-copy {
   max-width: 660px;

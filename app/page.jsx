@@ -62,6 +62,16 @@ export default function Home() {
       <Header />
       <main>
         <section className="hero" id="inicio">
+          <img
+            className="hero-bg"
+            src="/assets/hero-1920.webp"
+            srcSet="/assets/hero-960.webp 960w, /assets/hero-1920.webp 1920w"
+            sizes="100vw"
+            alt=""
+            width="1920"
+            height="1280"
+            fetchPriority="high"
+          />
           <div className="hero-content container">
             <p className="eyebrow">
               Reformas e construção civil em Balneário Camboriú
@@ -113,10 +123,10 @@ export default function Home() {
             </div>
             <div className="about-image">
               <img
-                src="https://www.jbjblocostelhastijolos.com.br/assets/img/blog/qualidade-dos-materiais-e-produtividade-da-obra.png"
+                src="/assets/sobre-nos.webp"
                 alt="Equipe trabalhando na construção de uma parede de blocos"
-                width="1200"
-                height="800"
+                width="1000"
+                height="750"
                 loading="lazy"
                 decoding="async"
               />
