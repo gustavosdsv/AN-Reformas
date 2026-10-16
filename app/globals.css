@@ -382,6 +382,60 @@ h3 {
   color: #c8c8c8;
   font-size: 1.1rem;
 }
+.faq-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+  align-items: start;
+}
+.faq-head > p:last-child {
+  margin-top: 22px;
+  color: #4b4b4b;
+}
+.faq-head a {
+  color: #8a5c00;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.faq-list {
+  display: grid;
+  gap: 12px;
+}
+.faq details {
+  background: var(--light);
+  border-left: 5px solid var(--gold);
+}
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  cursor: pointer;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+.faq summary::after {
+  content: "+";
+  flex: none;
+  color: var(--gold);
+  font: 800 1.8rem/1 var(--font-display);
+  transition: transform 0.2s;
+}
+.faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq summary h3 {
+  font: 700 1.02rem/1.4 var(--font-body);
+  text-transform: none;
+}
+.faq details p {
+  padding: 0 22px 22px;
+  color: #4b4b4b;
+}
 footer {
   padding: 26px 0;
   background: var(--graphite);
@@ -499,8 +553,12 @@ footer {
   .gallery figure {
     flex-basis: calc((100% - 14px) / 2);
   }
-  .contact-grid {
+  .contact-grid,
+  .faq-grid {
     grid-template-columns: 1fr;
+  }
+  .faq-grid {
+    gap: 36px;
   }
   .section-head {
     display: block;

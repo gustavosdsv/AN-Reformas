@@ -1,6 +1,17 @@
 import Header from "../components/header";
 
+import { faq, photos, serviceImages } from "../lib/site";
 import { whatsapp, whatsappLink } from "../lib/whatsapp";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map(([question, answer]) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
 
 const services = [
   [
@@ -43,27 +54,6 @@ const services = [
     "Mão de obra para diferentes etapas de construções residenciais e comerciais.",
     "Gostaria de solicitar um orçamento para uma obra. Podemos conversar sobre as etapas da construção e a disponibilidade da equipe?",
   ],
-];
-
-const serviceImages = {
-  Reformas: "/assets/services/reformas.png",
-  Pintura: "/assets/services/pintura.png",
-  Elétrica: "/assets/services/eletrica.png",
-  Hidráulica: "/assets/services/hidraulica.png",
-  Solda: "/assets/services/solda.png",
-  Calhas: "/assets/services/calhas.png",
-  Rufos: "/assets/services/rufos.png",
-  "Construção em geral": "/assets/services/construcao-geral.png",
-};
-
-const photos = [
-  "/assets/gallery/construcao-1.jpg",
-  "/assets/gallery/construcao-2.jpg",
-  "/assets/gallery/reformas-1.jpg",
-  "/assets/gallery/reformas-2.jpg",
-  "/assets/gallery/rufos-1.jpg",
-  "/assets/gallery/rufos-2.jpg",
-  "/assets/gallery/eletrica-hidraulica-1.jpg",
 ];
 
 export default function Home() {
@@ -136,7 +126,7 @@ export default function Home() {
             <div className="section-head">
               <div>
                 <p className="eyebrow">Serviços</p>
-                <h2>O que fazemos</h2>
+                <h2>Serviços de reforma e construção</h2>
               </div>
               <p>
                 Mão de obra para diferentes fases da sua construção ou reforma.
@@ -148,7 +138,7 @@ export default function Home() {
                   <img
                     className="service-image"
                     src={serviceImages[title]}
-                    alt=""
+                    alt={`Serviço de ${title.toLowerCase()} em Balneário Camboriú`}
                     loading="lazy"
                   />
                   <div className="service-card-content">
@@ -181,12 +171,12 @@ export default function Home() {
           <div className="container">
             <div className="gallery-head">
               <p className="eyebrow">Fotos</p>
-              <h2>Nosso trabalho</h2>
+              <h2>Obras em Balneário Camboriú</h2>
             </div>
             <div className="gallery">
-              {photos.map((src) => (
+              {photos.map(([src, alt]) => (
                 <figure key={src}>
-                  <img src={src} alt="" loading="lazy" />
+                  <img src={src} alt={alt} loading="lazy" />
                 </figure>
               ))}
             </div>
@@ -212,6 +202,38 @@ export default function Home() {
               Chamar no WhatsApp
             </a>
           </div>
+        </section>
+
+        <section className="faq" id="duvidas">
+          <div className="container faq-grid">
+            <div className="faq-head">
+              <p className="eyebrow">Perguntas frequentes</p>
+              <h2>Dúvidas sobre reformas em Balneário Camboriú</h2>
+              <p>
+                Não encontrou sua resposta?{" "}
+                <a href={whatsapp} target="_blank" rel="noopener noreferrer">
+                  Fale com a gente no WhatsApp
+                </a>
+                .
+              </p>
+            </div>
+            <div className="faq-list">
+              {faq.map(([question, answer]) => (
+                <details key={question}>
+                  <summary>
+                    <h3>{question}</h3>
+                  </summary>
+                  <p>{answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+            }}
+          />
         </section>
       </main>
       <footer>
