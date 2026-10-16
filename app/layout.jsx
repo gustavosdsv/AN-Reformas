@@ -56,6 +56,7 @@ export const metadata = {
     images: ["/assets/logo-an.jpeg"],
   },
   formatDetection: { telephone: false },
+  verification: { google: "RuM4sGqdFKiTPXrJlF_qykjUYrJEP6GCuwLh8rjB51M" },
   other: {
     "geo.region": "BR-SC",
     "geo.placename": "Balneário Camboriú",
